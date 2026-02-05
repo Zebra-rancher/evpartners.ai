@@ -1,0 +1,141 @@
+/* EV Partners - Earthling Automotive Inspired Palette */
+:root {
+      --primary: #D2691E;
+      --primary-dark: #A0522D;
+      --secondary: #2C2C2C;
+      --cream: #FDF5E6;
+      --cream-dark: #F5DEB3;
+      --text-dark: #1a1a1a;
+      --text-light: #666666;
+      --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+}
+
+nav {
+      background: var(--white);
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--secondary); }
+.logo span { color: var(--primary); }
+
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 500; }
+.nav-links a:hover { color: var(--primary); }
+
+.hero {
+      background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+      padding: 8rem 2rem 4rem;
+      text-align: center;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.hero h1 { font-size: 3rem; color: var(--secondary); margin-bottom: 1rem; }
+.hero h1 span { color: var(--primary); }
+.tagline { font-size: 1.5rem; color: var(--text-light); margin-bottom: 2rem; }
+.subtitle { font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem; }
+
+.cta-button {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+}
+.cta-button:hover { background: var(--primary-dark); }
+
+.value-banner {
+      background: var(--secondary);
+      color: var(--white);
+      text-align: center;
+      padding: 3rem 2rem;
+}
+.tech-badge {
+      display: inline-block;
+      background: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      margin-top: 1rem;
+}
+
+section { padding: 5rem 2rem; }
+.section-title { text-align: center; font-size: 2rem; color: var(--secondary); margin-bottom: 3rem; }
+.section-title span { color: var(--primary); }
+
+.audience-section { background: var(--white); }
+.alt-bg { background: var(--cream); }
+
+.cards-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+}
+
+.card {
+      background: var(--cream);
+      border-radius: 12px;
+      padding: 2rem;
+}
+.alt-bg .card { background: var(--white); }
+
+.locations-section { background: var(--cream); }
+.join-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--white);
+      text-align: center;
+}
+.join-section .cta-button { background: var(--white); color: var(--primary); }
+
+footer {
+      background: var(--secondary);
+      color: var(--white);
+      padding: 3rem 2rem;
+      text-align: center;
+}
+footer a { color: var(--primary); }
+
+@media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+    .nav-links { display: none; }
+    .cards-container { grid-template-columns: 1fr; }
+}}}
+}))}))
+}))})))
+})})})
+})
+})})})})}})
+}))
+})}))
+}})})})}))
+})})}})})}
+}))
+})
+}}
+}
