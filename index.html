@@ -28,6 +28,11 @@
                 <li><a href="#locations">Locations</a></li>
                 <li><a href="#join">Join Us</a></li>
             </ul>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -135,5 +140,11 @@
     <footer>
         <p>&copy; 2026 EV Partners</p>
     </footer>
+
+    <script>
+    document.querySelector('.hamburger').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    });
+    </script>
 </body>
 </html>
