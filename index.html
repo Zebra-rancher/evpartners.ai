@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- MAINTENANCE MODE: Change true to false to make site live again -->
+    <script>
+    var MAINTENANCE_MODE = true;
+    if (MAINTENANCE_MODE) {
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.innerHTML = '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#FDF5E6 0%,#F5DEB3 100%);font-family:Inter,-apple-system,sans-serif;text-align:center;padding:2rem;"><div><div style="font-size:2rem;font-weight:700;color:#2C2C2C;margin-bottom:1rem;">EV<span style="color:#D2691E;">Partners</span>.ai</div><h1 style="font-size:2.5rem;color:#2C2C2C;margin-bottom:1rem;">Coming Soon</h1><p style="font-size:1.2rem;color:#666;max-width:500px;margin:0 auto 2rem;">We are building something great for the EV service industry. Check back soon.</p><a href="mailto:info@evpartners.ai" style="display:inline-block;background:#D2691E;color:#fff;padding:1rem 2rem;border-radius:8px;text-decoration:none;font-weight:600;">Contact Us</a><p style="margin-top:3rem;color:#999;font-size:0.9rem;">&copy; 2026 EV Partners</p></div></div>';
+        });
+    }
+    </script>
+
     <nav>
         <div class="nav-container">
             <div class="logo">EV<span>Partners</span>.ai</div>
@@ -25,167 +35,44 @@
         <div class="hero-content">
             <h1>Your <span>EV</span> Service Partners</h1>
             <p class="tagline">Expert hybrid and electric vehicle repair</p>
-            <p class="subtitle">Locally owned shops, nationally connected. Serving Denver, Portland, San Francisco, and everywhere your EV needs an honest service partner.</p>
+            <p class="subtitle">Locally owned shops, nationally connected.</p>
             <a href="#locations" class="cta-button">Find a Location</a>
         </div>
     </section>
 
     <div class="value-banner">
         <h2>Accurate, Ethical Service</h2>
-        <p style="max-width: 800px; margin: 1rem auto; opacity: 0.9;">We fundamentally try to get it right—find what's actually wrong, fix exactly that, and ensure your EV delivers its full potential through honest practices and tech-forward excellence.</p>
         <span class="tech-badge">Technology-enabled service excellence</span>
     </div>
 
-    <!-- FOR CONSUMERS SECTION -->
     <section id="consumers" class="audience-section">
-        <h2 class="section-title">For <span>Consumers</span></h2>
-        <div class="cards-container">
-            <div class="card">
-                <h3 style="color: var(--primary); margin-bottom: 1rem;">Locally Owned</h3>
-                <p>Your shop is a real neighborhood business, not a corporate chain with monthly sales quotas.</p>
-                <ul style="margin-top: 1rem; margin-left: 1.5rem; color: var(--text-light);">
-                    <li>Personalized attention from owners who care</li>
-                    <li>Direct access to decision-makers</li>
-                    <li>Rooted in your community</li>
-                    <li>Backed by a national network</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3 style="color: var(--primary); margin-bottom: 1rem;">EV Specialists</h3>
-                <p>Hybrid and electric vehicles need different expertise than traditional cars.</p>
-                <ul style="margin-top: 1rem; margin-left: 1.5rem; color: var(--text-light);">
-                    <li>EV-specific certifications and training</li>
-                    <li>Specialized diagnostic equipment</li>
-                    <li>Understanding of high-voltage systems</li>
-                    <li>Experience with EV-specific issues</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3 style="color: var(--primary); margin-bottom: 1rem;">Ethical Practice</h3>
-                <p>Service should be honest, transparent, and focused on what your vehicle actually needs.</p>
-                <ul style="margin-top: 1rem; margin-left: 1.5rem; color: var(--text-light);">
-                    <li>Transparent pricing upfront</li>
-                    <li>Only recommend necessary work</li>
-                    <li>Detailed repair explanations</li>
-                    <li>EV ownership guidance</li>
-                </ul>
-            </div>
-        </div>
+        <h2>For Consumers</h2>
+        <p>Find trusted EV service near you</p>
     </section>
 
-    <!-- FOR FLEETS SECTION -->
-    <section id="fleets" class="audience-section alt-bg">
-        <h2 class="section-title">For <span>Fleets</span></h2>
-        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-            <div>
-                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Fleet Portal & AI-Ready Estimates</h3>
-                <p style="color: var(--text-light); margin-bottom: 1.5rem;">Service requests directly from your fleet management portal join our queue for rapid, accurate estimates powered by neural network AI.</p>
-                <ul style="margin-left: 1.5rem; color: var(--text-light);">
-                    <li style="margin-bottom: 0.5rem;">Industry-leading turnaround times</li>
-                    <li style="margin-bottom: 0.5rem;">Priority scheduling for fleet vehicles</li>
-                    <li style="margin-bottom: 0.5rem;">Multi-location service capability</li>
-                    <li style="margin-bottom: 0.5rem;">Real-time status tracking</li>
-                </ul>
-            </div>
-            <div class="card" style="text-align: center;">
-                <p style="color: var(--text-light); margin-bottom: 1rem;">AVERAGE FLEET METRICS</p>
-                <div style="display: flex; justify-content: space-around; margin-bottom: 1rem;">
-                    <div>
-                        <p style="font-size: 2.5rem; font-weight: 700; color: var(--primary);">98.4%</p>
-                        <p style="color: var(--text-light); font-size: 0.9rem;">First-time fix rate</p>
-                    </div>
-                    <div>
-                        <p style="font-size: 2.5rem; font-weight: 700; color: var(--primary);">2:45</p>
-                        <p style="color: var(--text-light); font-size: 0.9rem;">Avg estimate time</p>
-                    </div>
-                </div>
-                <div style="background: var(--cream); padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-                    <p style="font-weight: 600;">Current wait: <span style="color: var(--primary);">2:45 PM Today</span></p>
-                </div>
-            </div>
-        </div>
+    <section id="fleets" class="audience-section">
+        <h2>For Fleets</h2>
+        <p>Nationwide service network for your electric fleet</p>
     </section>
 
-    <!-- NEURAL NETWORK SECTION -->
-    <section style="background: var(--secondary); color: var(--white); text-align: center; padding: 5rem 2rem;">
-        <h2 style="font-size: 2rem; margin-bottom: 1rem;">The Neural <span style="color: var(--primary);">Network</span> of Expertise</h2>
-        <p style="max-width: 800px; margin: 0 auto 2rem; opacity: 0.9;">When an interesting technical repair challenges a partner in Portland, the diagnostic data is instantly contributed to our network to enrich our AI training data, while other network partners see that knowledge reflected in their AI as well.</p>
-    </section>
-
-    <!-- FOR INDUSTRY SECTION -->
     <section id="industry" class="audience-section">
-        <h2 class="section-title">For <span>Industry</span></h2>
-        <div class="cards-container">
-            <div class="card" style="border-top: 4px solid var(--primary);">
-                <h3 style="color: var(--primary); margin-bottom: 1rem;">Commercial Partner</h3>
-                <p>Fleet operators benefit from our network's collective expertise across all EV platforms.</p>
-            </div>
-            <div class="card" style="border-top: 4px solid var(--primary);">
-                <h3 style="color: var(--primary); margin-bottom: 1rem;">R&D Partnership</h3>
-                <p>Help shape the future of EV service with real-world data and insights.</p>
-            </div>
-            <div class="card" style="border-top: 4px solid var(--primary);">
-                <h3 style="color: var(--primary); margin-bottom: 1rem;">Network Access</h3>
-                <p>Connect independent service providers to your ecosystem.</p>
-            </div>
-        </div>
+        <h2>For Industry</h2>
+        <p>Partner with us to grow the EV service ecosystem</p>
     </section>
 
-    <!-- LOCATIONS SECTION -->
     <section id="locations" class="locations-section">
-        <h2 class="section-title">Our <span>Locations</span></h2>
-        <h3 style="text-align: center; margin-bottom: 2rem; color: var(--text-light);">Charter Members</h3>
-        <div class="cards-container" style="margin-bottom: 3rem;">
-            <div class="card" style="background: var(--white);">
-                <h4 style="color: var(--primary);">Earthling Automotive</h4>
-                <p style="color: var(--text-light);">Denver, CO</p>
-                <a href="https://earthlingautomotive.com" style="color: var(--primary); display: block; margin-top: 1rem;">Visit Website</a>
-            </div>
-            <div class="card" style="background: var(--white);">
-                <h4 style="color: var(--primary);">Electric Auto</h4>
-                <p style="color: var(--text-light);">Portland, OR</p>
-                <a href="#" style="color: var(--primary); display: block; margin-top: 1rem;">Visit Website</a>
-            </div>
-            <div class="card" style="background: var(--white);">
-                <h4 style="color: var(--primary);">Eco Lux Automotive</h4>
-                <p style="color: var(--text-light);">San Francisco, CA</p>
-                <a href="#" style="color: var(--primary); display: block; margin-top: 1rem;">Visit Website</a>
-            </div>
-        </div>
-        <h3 style="text-align: center; margin-bottom: 2rem; color: var(--text-light);">Industry Friends</h3>
-        <div class="cards-container">
-            <div class="card" style="background: var(--white);"><h4>Good Hybrid Auto</h4><p style="color: var(--text-light); font-size: 0.9rem;">Grand Rapids, MI</p></div>
-            <div class="card" style="background: var(--white);"><h4>EV Fixers</h4><p style="color: var(--text-light); font-size: 0.9rem;">Houston, TX</p></div>
-            <div class="card" style="background: var(--white);"><h4>Eco Glow Hybrid</h4><p style="color: var(--text-light); font-size: 0.9rem;">Los Angeles, CA</p></div>
-            <div class="card" style="background: var(--white);"><h4>Rivian Launch</h4><p style="color: var(--text-light); font-size: 0.9rem;">Irvine, CA</p></div>
-        </div>
+        <h2>Our Locations</h2>
+        <p>Coming soon - find a partner shop near you</p>
     </section>
 
-    <!-- JOIN NETWORK SECTION -->
-    <section id="join" style="background: var(--white); padding: 5rem 2rem;">
-        <h2 class="section-title">Join the <span>Network</span></h2>
-        <div style="max-width: 500px; margin: 0 auto;">
-            <div class="card">
-                <div style="background: var(--cream); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                    <p style="font-weight: 600;">Start FREE today</p>
-                </div>
-                <h4>Shop Profile</h4>
-                <p style="color: var(--text-light); margin-top: 1rem;">Contact us to join the EV Partners network.</p>
-                <a href="mailto:join@evpartners.ai" class="cta-button" style="display: block; text-align: center; margin-top: 1rem;">Apply Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="join-section">
-        <h2 style="font-size: 2rem; margin-bottom: 1rem;">Ready to Transform EV Service?</h2>
-        <p style="max-width: 600px; margin: 0 auto 2rem; opacity: 0.9;">Join the network of independent EV service professionals building the future of electric vehicle service together.</p>
-        <a href="mailto:info@evpartners.ai" class="cta-button">Start the Conversation</a>
+    <section id="join" class="join-section">
+        <h2>Want to Join Us?</h2>
+        <p>Become part of the EV Partners network</p>
+        <a href="mailto:info@evpartners.ai" class="cta-button">Contact Us</a>
     </section>
 
     <footer>
-        <p>&copy; 2026 EV Partners. All rights reserved.</p>
-        <p style="margin-top: 1rem; opacity: 0.7;">Built by shops, for shops. Powered by shared expertise.</p>
+        <p>&copy; 2026 EV Partners</p>
     </footer>
 </body>
 </html>
