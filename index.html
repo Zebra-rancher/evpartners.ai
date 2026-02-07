@@ -62,6 +62,7 @@
                 <li><a href="#locations">Locations</a></li>
                 <li><a href="#join">Join Us</a></li>
                 <li><a href="blog/">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="hamburger" aria-label="Toggle navigation">
                 <span></span>
@@ -171,6 +172,49 @@
         </ul>
         <a href="mailto:info@evpartners.ai" class="cta-button">Contact Us</a>
     </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-form-container">
+            <h2>Get in Touch</h2>
+            <p class="subtitle">Interested in EV Partners? Drop us a line.</p>
+            <form id="contactForm" onsubmit="return submitContactForm(event)">
+                <div class="form-group">
+                    <label for="contactName">Name</label>
+                    <input type="text" id="contactName" name="name" required placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email</label>
+                    <input type="email" id="contactEmail" name="email" required placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="contactRole">I am a...</label>
+                    <select id="contactRole" name="role" required>
+                        <option value="" disabled selected>Select one</option>
+                        <option value="Consumer">Consumer</option>
+                        <option value="Fleet Manager">Fleet Manager</option>
+                        <option value="Shop Owner">Shop Owner</option>
+                        <option value="Industry Partner">Industry Partner</option>
+                    </select>
+                </div>
+                <button type="submit" class="cta-button contact-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+    function submitContactForm(event) {
+        event.preventDefault();
+        var name = document.getElementById('contactName').value.trim();
+        var email = document.getElementById('contactEmail').value.trim();
+        var role = document.getElementById('contactRole').value;
+        var subject = 'EV Partners Inquiry from ' + name + ' (' + role + ')';
+        var body = 'Name: ' + name + '\nEmail: ' + email + '\nRole: ' + role;
+        window.location.href = 'mailto:info@evpartners.ai'
+            + '?subject=' + encodeURIComponent(subject)
+            + '&body=' + encodeURIComponent(body);
+        return false;
+    }
+    </script>
 
     <footer class="site-footer">
         <p>&copy; 2026 EV Partners. All rights reserved.</p>
