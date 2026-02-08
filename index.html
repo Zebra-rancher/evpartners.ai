@@ -39,12 +39,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- MAINTENANCE MODE: Change true to false to make site live again -->
     <script>
-    var MAINTENANCE_MODE = true;
+    var MAINTENANCE_MODE = false;
     if (MAINTENANCE_MODE) {
         document.addEventListener("DOMContentLoaded", function() {
             document.body.innerHTML = '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#FDF5E6 0%,#F5DEB3 100%);font-family:Inter,-apple-system,sans-serif;text-align:center;padding:2rem;"><div><div style="font-size:2rem;font-weight:700;color:#2C2C2C;margin-bottom:1rem;">EV<span style="color:#D2691E;">Partners</span>.ai</div><h1 style="font-size:2.5rem;color:#2C2C2C;margin-bottom:1rem;">Coming Soon</h1><p style="font-size:1.2rem;color:#666;max-width:500px;margin:0 auto 2rem;">We are building something great for the EV service industry. Check back soon.</p><a href="mailto:info@evpartners.ai" style="display:inline-block;background:#D2691E;color:#fff;padding:1rem 2rem;border-radius:8px;text-decoration:none;font-weight:600;">Contact Us</a><p style="margin-top:3rem;color:#999;font-size:0.9rem;">&copy; 2026 EV Partners</p></div></div>';
@@ -54,13 +56,12 @@
 
     <nav>
         <div class="nav-container">
-            <div class="logo">EV<span>Partners</span>.ai</div>
+            <div class="logo"><span class="ev-highlight">EV</span><span>Partners</span>.ai</div>
             <ul class="nav-links">
                 <li><a href="#consumers">Consumers</a></li>
                 <li><a href="#fleets">Fleets</a></li>
                 <li><a href="#industry">Industry</a></li>
-                <li><a href="#locations">Locations</a></li>
-                <li><a href="#join">Join Us</a></li>
+                <li><a href="#network">Network</a></li>
                 <li><a href="blog/">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -74,16 +75,16 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Your <span>EV</span> Service Partners</h1>
+            <h1>Your <span class="ev-highlight">EV</span> Service Partners</h1>
             <p class="tagline">Expert hybrid and electric vehicle repair</p>
             <p class="subtitle">Locally owned shops, nationally connected.</p>
-            <a href="#locations" class="cta-button">Find a Location</a>
+            <a href="#network" class="cta-button">Find a Location</a>
         </div>
     </section>
 
     <div class="value-banner">
-        <h2>Accurate, Ethical Service</h2>
-        <span class="tech-badge">Technology-enabled service excellence</span>
+        <h2>Best-in-Class Service Excellence</h2>
+        <p class="banner-subtext">We believe in doing things right, the first time, every time. Our network abides by rigorous standards for technical accuracy, speed of service, and square dealing, so you get consistent quality no matter which location you visit.</p>
     </div>
 
     <section id="consumers" class="audience-section">
@@ -91,18 +92,22 @@
         <p class="subtitle">Your EV deserves a specialist. Our network of locally owned shops delivers dealership-quality service without the dealership price tag.</p>
         <div class="cards-container">
             <div class="card">
+                <span class="card-icon"><i class="fa-solid fa-bolt"></i></span>
                 <h3>Certified EV Technicians</h3>
                 <p>Every shop in our network employs technicians specifically trained and certified in hybrid and electric vehicle systems. From high-voltage battery diagnostics to regenerative braking, your car is in expert hands.</p>
             </div>
             <div class="card">
+                <span class="card-icon"><i class="fa-solid fa-file-invoice-dollar"></i></span>
                 <h3>Transparent Pricing</h3>
                 <p>No surprises, no hidden fees. You get a detailed estimate before any work begins, and we explain every line item so you understand exactly what you're paying for.</p>
             </div>
             <div class="card">
+                <span class="card-icon"><i class="fa-solid fa-shield-halved"></i></span>
                 <h3>Warranty-Safe Service</h3>
                 <p>Our service procedures follow manufacturer guidelines, so your factory warranty stays intact. We use OEM-spec parts and document everything to protect your coverage.</p>
             </div>
             <div class="card">
+                <span class="card-icon"><i class="fa-solid fa-location-dot"></i></span>
                 <h3>Convenient Local Shops</h3>
                 <p>Skip the long dealership wait times. Our partner shops are locally owned businesses in your neighborhood, offering flexible scheduling and the personal attention you deserve.</p>
             </div>
@@ -137,51 +142,24 @@
         <p class="subtitle">The EV service market is growing fast. Let's build the infrastructure together. We partner with manufacturers, distributors, and training organizations to strengthen the independent service channel.</p>
         <div class="cards-container">
             <div class="card">
+                <span class="card-icon"><i class="fa-solid fa-handshake"></i></span>
                 <h3>OEM Partnerships</h3>
                 <p>We work directly with vehicle and component manufacturers to develop service programs, share technical data, and create certified repair pathways for independent shops.</p>
             </div>
             <div class="card">
+                <span class="card-icon"><i class="fa-solid fa-graduation-cap"></i></span>
                 <h3>Training Programs</h3>
                 <p>Our structured training curriculum prepares independent technicians for EV service. From foundational high-voltage safety to advanced battery diagnostics, we're building the workforce the industry needs.</p>
             </div>
             <div class="card">
+                <span class="card-icon"><i class="fa-solid fa-boxes-stacked"></i></span>
                 <h3>Parts Distribution</h3>
                 <p>A streamlined supply chain for EV-specific parts and components. Our distribution network ensures shops have the right parts available when they need them, reducing repair times.</p>
             </div>
             <div class="card">
+                <span class="card-icon"><i class="fa-solid fa-laptop-code"></i></span>
                 <h3>Technology Platform</h3>
                 <p>Our shared diagnostic and service management platform connects the ecosystem. Shops get the tools they need, and industry partners gain valuable insights into service trends and vehicle performance.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Replace with real testimonials -->
-    <section class="testimonials-section alt-bg">
-        <h2>Trusted by EV Owners &amp; Shops</h2>
-        <div class="testimonials-container">
-            <div class="testimonial-card">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-quote">"I was nervous about taking my EV to an independent shop, but EV Partners connected me with a team that knew my car inside and out. Faster and more affordable than the dealership."</p>
-                <div class="testimonial-author">
-                    <strong>Sarah M.</strong>
-                    <span>Tesla Owner</span>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-quote">"Managing a fleet of 40 electric vans used to mean juggling a dozen different shops. Now we have one network with consistent quality and real-time visibility into every repair."</p>
-                <div class="testimonial-author">
-                    <strong>Mike R.</strong>
-                    <span>Fleet Manager</span>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-quote">"Joining the EV Partners network doubled our EV repair volume in three months. The training, tools, and customer referrals have been a game changer for our shop."</p>
-                <div class="testimonial-author">
-                    <strong>Lisa T.</strong>
-                    <span>Shop Owner, Denver CO</span>
-                </div>
             </div>
         </div>
     </section>
@@ -203,28 +181,48 @@
         </div>
     </div>
 
-    <section id="locations" class="locations-section">
-        <h2>Our Locations</h2>
-        <p class="subtitle">We're launching in select markets and expanding nationwide. Our first partner shops are being onboarded now, with many more on the way.</p>
-        <p style="margin-top: 1rem;">Want to know when EV Partners arrives in your area? We'll let you know.</p>
-        <a href="mailto:info@evpartners.ai?subject=Notify%20me%20when%20EV%20Partners%20is%20in%20my%20area" class="cta-button" style="margin-top: 1.5rem;">Notify Me</a>
+    <section class="neural-section">
+        <h2>Neural Network Diagnostics</h2>
+        <p class="subtitle">Our AI-powered diagnostic platform harnesses the troubleshooting power of master mechanics nationwide, combined. Every repair in the network makes the system smarter, helping technicians diagnose faster and fix right the first time.</p>
     </section>
 
-    <section id="join" class="join-section">
-        <h2>Want to Join Us?</h2>
-        <p>Become part of the EV Partners network and grow your shop's EV business with the support you need to succeed.</p>
-        <ul style="list-style: none; padding: 0; margin: 2rem auto; max-width: 500px; text-align: left;">
-            <li style="margin-bottom: 1rem;">&#10003; Training and certification programs to get your technicians EV-ready</li>
-            <li style="margin-bottom: 1rem;">&#10003; Access to our technology platform, diagnostic tools, and service resources</li>
-            <li style="margin-bottom: 1rem;">&#10003; Marketing support, customer referrals, and preferred parts pricing</li>
-        </ul>
-        <a href="mailto:info@evpartners.ai" class="cta-button">Contact Us</a>
+    <section class="charter-section">
+        <h2>Charter Members</h2>
+        <p class="subtitle">The founding shops of the EV Partners network, setting the standard for independent EV service.</p>
+        <div class="charter-grid">
+            <div class="charter-card">
+                <img src="https://atomicauto.com/wp-content/uploads/atomic-main-logo-color.png.webp" alt="Atomic Auto logo" class="charter-logo">
+                <h3>Atomic Auto</h3>
+                <p class="charter-sub">Pacific Northwest hybrid specialists</p>
+                <a href="https://atomicauto.com" target="_blank" rel="noopener" class="charter-link">atomicauto.com &rarr;</a>
+            </div>
+            <div class="charter-card">
+                <img src="https://images.squarespace-cdn.com/content/v1/678ed4fc2bd50376fb935591/0199a273-2da3-4794-afc3-34884135c2b2/FIN5+Earthling+Repair+Logo+White+and+Black+options+%285+x+1.5+in%29+%281%29.png" alt="Earthling Automotive logo" class="charter-logo">
+                <h3>Earthling Automotive</h3>
+                <p class="charter-sub">Bay Area's trusted EV experts</p>
+                <a href="https://www.earthlingautomotive.com" target="_blank" rel="noopener" class="charter-link">earthlingautomotive.com &rarr;</a>
+            </div>
+            <div class="charter-card">
+                <img src="https://www.milehybridauto.com/wp-content/uploads/2018/09/new-milehybrid-logo-new.svg" alt="Mile Hybrid Automotive logo" class="charter-logo">
+                <h3>Mile Hybrid Automotive</h3>
+                <p class="charter-sub">Denver's Rocky Mountain EV experts</p>
+                <a href="https://www.milehybridauto.com" target="_blank" rel="noopener" class="charter-link">milehybridauto.com &rarr;</a>
+            </div>
+        </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section id="network" class="network-section">
+        <h2>Member Network</h2>
+        <p class="subtitle">Our growing network of independent EV service shops across the country.</p>
+        <div class="map-container">
+            <div id="evp-map"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="cta-contact-section">
+        <h2>Ready to Transform EV Service?</h2>
+        <p class="subtitle">Whether you're a consumer, fleet manager, shop owner, or industry partner, we'd love to hear from you.</p>
         <div class="contact-form-container">
-            <h2>Get in Touch</h2>
-            <p class="subtitle">Interested in EV Partners? Drop us a line.</p>
             <form id="contactForm" onsubmit="return submitContactForm(event)">
                 <div class="form-group">
                     <label for="contactName">Name</label>
@@ -244,6 +242,10 @@
                         <option value="Industry Partner">Industry Partner</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage" name="message" placeholder="How can we help?"></textarea>
+                </div>
                 <button type="submit" class="cta-button contact-submit">Send Message</button>
             </form>
         </div>
@@ -255,8 +257,9 @@
         var name = document.getElementById('contactName').value.trim();
         var email = document.getElementById('contactEmail').value.trim();
         var role = document.getElementById('contactRole').value;
+        var message = document.getElementById('contactMessage').value.trim();
         var subject = 'EV Partners Inquiry from ' + name + ' (' + role + ')';
-        var body = 'Name: ' + name + '\nEmail: ' + email + '\nRole: ' + role;
+        var body = 'Name: ' + name + '\nEmail: ' + email + '\nRole: ' + role + '\n\nMessage:\n' + message;
         window.location.href = 'mailto:info@evpartners.ai'
             + '?subject=' + encodeURIComponent(subject)
             + '&body=' + encodeURIComponent(body);
@@ -274,6 +277,66 @@
     document.querySelector('.hamburger').addEventListener('click', function() {
         document.querySelector('.nav-links').classList.toggle('active');
     });
+    </script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+    (function() {
+        var map = L.map('evp-map', {
+            center: [39.5, -98.5],
+            zoom: 4,
+            zoomControl: false,
+            dragging: false,
+            scrollWheelZoom: false,
+            doubleClickZoom: false,
+            boxZoom: false,
+            keyboard: false,
+            touchZoom: false,
+            attributionControl: true
+        });
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        var shops = [
+            {
+                name: 'Atomic Auto',
+                lat: 45.5272,
+                lng: -122.5578,
+                logo: 'https://atomicauto.com/wp-content/uploads/atomic-main-logo-color.png.webp',
+                url: 'https://atomicauto.com'
+            },
+            {
+                name: 'Earthling Automotive',
+                lat: 37.7360,
+                lng: -122.4020,
+                logo: 'https://images.squarespace-cdn.com/content/v1/678ed4fc2bd50376fb935591/0199a273-2da3-4794-afc3-34884135c2b2/FIN5+Earthling+Repair+Logo+White+and+Black+options+%285+x+1.5+in%29+%281%29.png',
+                url: 'https://www.earthlingautomotive.com'
+            },
+            {
+                name: 'Mile Hybrid Automotive',
+                lat: 39.7700,
+                lng: -104.9390,
+                logo: 'https://www.milehybridauto.com/wp-content/uploads/2018/09/new-milehybrid-logo-new.svg',
+                url: 'https://www.milehybridauto.com'
+            }
+        ];
+
+        shops.forEach(function(shop) {
+            var icon = L.divIcon({
+                className: 'map-pin-wrapper',
+                html: '<div class="map-pin"><img src="' + shop.logo + '" alt="' + shop.name + '"><div class="map-pin-stem"></div><div class="map-pin-dot"></div></div>',
+                iconSize: [32, 68],
+                iconAnchor: [16, 68],
+                popupAnchor: [0, -68]
+            });
+
+            L.marker([shop.lat, shop.lng], { icon: icon })
+                .addTo(map)
+                .bindPopup('<strong>' + shop.name + '</strong><br><a href="' + shop.url + '" target="_blank" rel="noopener">Visit website &rarr;</a>');
+        });
+    })();
     </script>
 </body>
 </html>
