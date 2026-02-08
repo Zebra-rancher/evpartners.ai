@@ -326,10 +326,10 @@
         shops.forEach(function(shop) {
             var icon = L.divIcon({
                 className: 'map-pin-wrapper',
-                html: '<div class="map-pin"><img src="' + shop.logo + '" alt="' + shop.name + '"><div class="map-pin-stem"></div><div class="map-pin-dot"></div></div>',
-                iconSize: [32, 68],
-                iconAnchor: [16, 68],
-                popupAnchor: [0, -68]
+                html: '<div class="map-pin"><img src="' + shop.logo + '" alt="' + shop.name + '"><div class="map-pin-dot"></div></div>',
+                iconSize: [20, 30],
+                iconAnchor: [10, 30],
+                popupAnchor: [0, -30]
             });
 
             L.marker([shop.lat, shop.lng], { icon: icon })
